@@ -1,3 +1,5 @@
+<?php include 'header.php'; ?>
+
 <style type="text/css">
 @import url("style.css");
 </style>
@@ -12,9 +14,7 @@ require_once('vendor/autoload.php');
 use mikehaertl\pdftk\Pdf;
 
 error_reporting(-1);
-include "./_pdo.php";
-$db_file = "./sqlite-database.db";
-PDO_Connect("sqlite:$db_file");
+
 print("PDO_Connect(): successsfully connected<br>");
 print("The database file: <b>$db_file</b><br>");
 
@@ -65,4 +65,5 @@ if ($result === false) {
 
 
 print_r($error);
-?>
+
+include 'footer.php'; ?>
